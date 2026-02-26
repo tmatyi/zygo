@@ -70,8 +70,39 @@ See [.windsurfrules](./.windsurfrules) for:
 - ✅ **M3:** Event Management (Organizer Dashboard)
 - ✅ **M4:** Ticket Logic & Purchasing Flow
 - ✅ **M5:** Payment Integration (Barion)
-- 🔄 **M6:** Check-in App & QR validation
-- ⏳ **M7:** Invoicing (Billingo) & Launch
+- ✅ **M6:** Check-in App & QR validation
+- 🔄 **M7:** Invoicing (Billingo) & Launch
+
+## 🎉 Current Version: v0.3.0
+
+**Complete M6 Implementation - QR Check-in System**
+
+### ✅ Features Available
+
+- **Event Management** - Create and manage events with tickets
+- **Online Ticketing** - Customer purchase flow with payment
+- **Barion Integration** - Real payment processing
+- **QR Code Generation** - Unique tokens for every ticket
+- **Mobile Scanner** - Camera-based check-in system
+- **Check-in Tracking** - Usage validation and timestamps
+
+### 📱 Mobile Ready
+
+- Scanner works on mobile browsers
+- QR codes optimized for phone display
+- Touch-friendly interface
+- Camera permission handling
+
+### 🚀 Production Features
+
+- Complete authentication system
+- Payment processing with Barion
+- QR-based check-in validation
+- Real-time feedback screens
+- Database tracking and reporting
+
+**GitHub Repository:** https://github.com/tmatyi/zygo
+**Latest Release:** https://github.com/tmatyi/zygo/releases/tag/v0.3.0
 
 ## Documentation
 
@@ -83,3 +114,5 @@ See [.windsurfrules](./.windsurfrules) for:
 - [M4_COMPLETION_SUMMARY.md](./M4_COMPLETION_SUMMARY.md) - M4 implementation details
 - [M5_DATABASE_SCHEMA.sql](./M5_DATABASE_SCHEMA.sql) - M5 database schema
 - [M5_COMPLETION_SUMMARY.md](./M5_COMPLETION_SUMMARY.md) - M5 implementation details
+- [M6_DATABASE_SCHEMA.sql](./M6_DATABASE_SCHEMA.sql) - M6 database schema
+- [RELEASE_NOTES_v0.3.0.md](./RELEASE_NOTES_v0.3.0.md) - Complete M6 implementation details
