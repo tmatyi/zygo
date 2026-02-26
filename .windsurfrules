@@ -1,0 +1,35 @@
+# ZYGO – Windsurf Development Rules (V2 - Final)
+
+## AI Behavior & Context
+
+- **Full File Awareness:** Before making any changes, the AI MUST read and analyze the entire file and its local imports to ensure consistency.
+- **Incremental Changes:** Do not rewrite the whole file if only a small part changes, but ensure the new code integrates perfectly with the existing logic.
+
+## File Structure & Size Limits
+
+- **File Length Limit:** Files should not exceed **300-400 lines**. If a file grows beyond this, the AI MUST suggest refactoring logic into hooks (`src/hooks/`) or sub-components.
+- **Atomic Design:** Keep components small and focused on a single responsibility.
+- **Server vs Client:** Explicitly use `'use client'` only when necessary (interactivity, hooks). Default to Server Components for SEO and performance.
+
+## General Tech Rules
+
+- **TypeScript:** MANDATORY. No `any`. Use strict types for everything.
+- **Validation:** Use `zod` for validating form inputs and API responses before processing data.
+- **Naming:** PascalCase for components, camelCase for functions/variables, kebab-case for filenames.
+
+## Styling & UI
+
+- **Tailwind & ShadcnUI:** Only Tailwind classes allowed. Use `cn()` utility for conditional classes.
+- **Icons:** Use `lucide-react`.
+- **Mobile-First:** Every UI change must be verified for mobile responsiveness first.
+
+## Database & Security (Supabase)
+
+- **Schema Adherence:** Always follow the schema: profiles, events, tickets, orders, order_items.
+- **RLS & Security:** Never suggest queries that bypass Row Level Security.
+- **Server Actions:** Use Next.js Server Actions for database mutations instead of raw API routes where possible.
+
+## Error Handling
+
+- **Graceful Failures:** Use try/catch blocks and provide user-friendly error messages (e.g., using a Toast component).
+- **Logging:** Log critical errors to the console with clear descriptions.

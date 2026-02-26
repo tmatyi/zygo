@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ZYGO - Modern Ticket Sales Platform
 
-## Getting Started
+A high-performance ticket sales platform built for the Hungarian market, designed to compete with platforms like Cooltix with superior UX and lower fees.
 
-First, run the development server:
+## Tech Stack
+
+- **Framework:** Next.js 14+ (App Router, TypeScript)
+- **Backend:** Supabase (PostgreSQL, Auth, RLS)
+- **Styling:** Tailwind CSS + ShadcnUI
+- **Icons:** Lucide React
+- **Validation:** Zod
+- **Payment:** Barion (planned)
+- **Invoicing:** Billingo (planned)
+
+## Quick Start
+
+### 1. Prerequisites
+
+- Node.js 18+ installed
+- Supabase account and project created
+
+### 2. Setup
+
+See [SETUP.md](./SETUP.md) for detailed setup instructions including:
+
+- Environment variables configuration
+- Database schema and RLS policies
+- Authentication setup
+
+### 3. Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+├── app/                    # Next.js App Router pages
+│   └── auth/              # Authentication routes
+├── components/            # React components
+│   └── ui/               # ShadcnUI components
+├── lib/                   # Utilities and configurations
+│   └── supabase/         # Supabase client and helpers
+│       ├── client.ts     # Browser client
+│       ├── server.ts     # Server client
+│       ├── types.ts      # TypeScript types
+│       ├── queries.ts    # Database queries
+│       └── auth.ts       # Auth helpers
+├── middleware.ts          # Session management
+└── .windsurfrules        # Development standards
+```
 
-## Learn More
+## Development Standards
 
-To learn more about Next.js, take a look at the following resources:
+See [.windsurfrules](./.windsurfrules) for:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- TypeScript strict mode (no `any`)
+- File size limits (300-400 lines)
+- Component architecture
+- Security best practices
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Roadmap
 
-## Deploy on Vercel
+- ✅ **M1:** Strategy & Conceptualization
+- ✅ **M2:** Core Infrastructure, Database & Auth
+- ✅ **M3:** Event Management (Organizer Dashboard)
+- ✅ **M4:** Ticket Logic & Purchasing Flow
+- ✅ **M5:** Payment Integration (Barion)
+- 🔄 **M6:** Check-in App & QR validation
+- ⏳ **M7:** Invoicing (Billingo) & Launch
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Documentation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [PROJECT_CONTEXT.md](./PROJECT_CONTEXT.md) - Business strategy and goals
+- [SETUP.md](./SETUP.md) - M2 setup and configuration guide
+- [M3_DATABASE_SCHEMA.sql](./M3_DATABASE_SCHEMA.sql) - M3 database schema
+- [M3_COMPLETION_SUMMARY.md](./M3_COMPLETION_SUMMARY.md) - M3 implementation details
+- [M4_DATABASE_SCHEMA.sql](./M4_DATABASE_SCHEMA.sql) - M4 database schema
+- [M4_COMPLETION_SUMMARY.md](./M4_COMPLETION_SUMMARY.md) - M4 implementation details
+- [M5_DATABASE_SCHEMA.sql](./M5_DATABASE_SCHEMA.sql) - M5 database schema
+- [M5_COMPLETION_SUMMARY.md](./M5_COMPLETION_SUMMARY.md) - M5 implementation details
